@@ -1,16 +1,14 @@
 modLoader = "javafml"
 loaderVersion = "${forge_loader_version_range}"
 license = "${license}"
-#issueTrackerURL =
-#clientSideOnly =
+issueTrackerURL = "https://github.com/Sir-Cow/bundle-auto-funnel/issues"
 [[mods]]
 modId = "${mod_id}"
 version = "${version}"
 displayName = "${mod_name}"
-#updateJSONURL =
-#displayURL =
-iconFile = "icon.png"
-bannerFile = "icon.png"
+updateJSONURL = "https://api.modrinth.com/updates/S6vzeQvK/forge_updates.json"
+displayURL = "https://github.com/Sir-Cow/bundle-auto-funnel"
+logoFile = "icon.png"
 credits = "${credits}"
 authors = "${mod_author}"
 description = '''${description}'''

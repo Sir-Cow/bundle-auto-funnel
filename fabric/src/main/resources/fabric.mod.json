@@ -8,16 +8,16 @@
         "${mod_author}"
     ],
     "contact": {
-        "homepage": "",
-        "sources": "",
-        "issues": ""
+        "homepage": "https://modrinth.com/mod/bundle-auto-funnel",
+        "sources": "https://github.com/Sir-Cow/bundle-auto-funnel",
+        "issues": "https://github.com/Sir-Cow/bundle-auto-funnel/issues"
     },
     "license": "${license}",
     "icon": "icon.png",
     "environment": "*",
     "entrypoints": {
         "main": [
-            "com.example.examplemod.ExampleMod"
+            "sircow.bundleautofunnel.FabricBundleAutoFunnel"
         ]
     },
     "mixins": [
@@ -32,7 +32,11 @@
     },
     "custom": {
         "modmenu": {
-            "update_checker": false
+            "links": {
+                "modmenu.modrinth": "https://modrinth.com/mod/bundle-auto-funnel",
+                "modmenu.curseforge": "https://curseforge.com/minecraft/mc-mods/bundle-auto-funnel"
+            },
+            "update_checker": true
         }
     }
 }
