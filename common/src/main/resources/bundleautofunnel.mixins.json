@@ -3,7 +3,10 @@
   "minVersion": "0.8",
   "package": "sircow.bundleautofunnel.mixin",
   "compatibilityLevel": "JAVA_21",
-  "mixins": [],
+  "mixins": [
+    "AbstractContainerMenuMixin",
+    "ItemEntityMixin"
+  ],
   "client": [],
   "server": [],
   "injectors": {
