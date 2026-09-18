@@ -3,7 +3,7 @@ package sircow.bundleautofunnel.mixin;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
-import net.minecraft.world.inventory.ContainerInput;
+import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import org.spongepowered.asm.mixin.Mixin;
@@ -15,9 +15,9 @@ import sircow.bundleautofunnel.BundleHelper;
 @Mixin(AbstractContainerMenu.class)
 public class AbstractContainerMenuMixin {
     @Inject(method = "clicked", at = @At("HEAD"), cancellable = true)
-    private void bundleautofunnel$onClicked(int slotIndex, int buttonNum, ContainerInput containerInput, Player player, CallbackInfo ci) {
+    private void bundleautofunnel$onClicked(int slotIndex, int buttonNum, ClickType clickType, Player player, CallbackInfo ci) {
         if (player.level().isClientSide()) return;
-        if (containerInput != ContainerInput.QUICK_MOVE) return;
+        if (clickType != ClickType.QUICK_MOVE) return;
 
         AbstractContainerMenu menu = (AbstractContainerMenu) (Object) this;
 

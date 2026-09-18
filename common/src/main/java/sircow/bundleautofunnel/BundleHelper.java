@@ -9,7 +9,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.component.BundleContents;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.ItemStackTemplate;
 
 import java.util.List;
 
@@ -76,8 +75,8 @@ public class BundleHelper {
 
         boolean containsItem = false;
 
-        for (ItemStackTemplate template : contents.items()) {
-            if (template.typeHolder().value() == stack.getItem()) {
+        for (ItemStack item : contents.items()) {
+            if (item.getItem() == stack.getItem()) {
                 containsItem = true;
                 break;
             }
