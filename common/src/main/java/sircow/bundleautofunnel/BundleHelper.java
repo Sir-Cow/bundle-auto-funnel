@@ -85,7 +85,7 @@ public class BundleHelper {
 
         if (!containsItem) return 0;
 
-        BundleContents.Mutable mutable = new BundleContents.Mutable(contents);
+        BundleContents.Mutable mutable = contents.asMutable();
         int inserted = mutable.tryInsert(stack);
 
         if (inserted <= 0) return 0;
